@@ -1,0 +1,39 @@
+$primary-col: #3185FC;
+$secondary-col: #E84855;
+$bg-dark-col: #403F4C;
+$bg-light-col: #FFFFFF;
+
+$primary-font: 'Poppins', sans-serif;
+$secondary-font: 'Roboto', sans-serif;
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+*,*::after,*::before{
+  box-sizing: inherit;
+}
+
+main{
+  min-height: 100vh;
+}
+
+@mixin Btn{
+  border-style: none;
+  width: 50px;
+  height: 50px;
+  background: none;
+  text-align: center;
+  font-family: $secondary-font;
+  font-size: 1.12em;
+  text-transform: capitalize;
+  color: white;
+  transition:  all ease-in-out;
+  &:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+  }
+}
+

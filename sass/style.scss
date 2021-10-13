@@ -1,0 +1,38 @@
+@import 'config';
+
+nav{
+  position: sticky;
+  width: 100vw;
+  height: 100px;
+  background-color: $bg-dark-col;
+  z-index:0;
+  h1{
+    font-family: $primary-font;
+    text-indent: 2em;
+    text-transform: capitalize;
+    font-size: 2em;
+    color: $bg-light-col;
+    span{
+      color: $primary-col;
+    }
+  }
+  ul{
+    list-style: none;
+     display: grid;
+     grid-template-columns: auto 6em 6em;
+  
+
+    li{
+      padding:1em 1em;
+      button{
+        @include Btn;
+       
+      }
+      .register{
+        color: $secondary-col;
+      }
+    }
+   
+  }
+
+}
