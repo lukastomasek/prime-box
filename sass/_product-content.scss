@@ -1,0 +1,27 @@
+.product-contents{
+  height: 500px;
+  background-color: darken($bg-dark-col, 30%);
+  .general{
+    .included{
+      text-align: center;
+      color: white;
+      padding-top: 1em;
+      margin-bottom: 1em;
+      color: $primary-col;
+      font-size: 1.05em;
+      text-transform: uppercase;
+    }
+    h2{
+      color:white;
+      text-transform: capitalize;
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 1em;
+    }
+    .seasons{
+      text-align: center;
+      color:white;
+      text-transform: capitalize;
+    }
+  }
+}

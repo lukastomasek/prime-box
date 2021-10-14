@@ -18,6 +18,17 @@ $secondary-font: 'Roboto', sans-serif;
 
 main{
   min-height: 100vh;
+  background-color: $bg-dark-col;
+}
+@mixin Logo{
+  font-family: $primary-font;
+  text-indent: 2em;
+  text-transform: capitalize;
+  font-size: 2em;
+  color: $bg-light-col;
+  span{
+    color: $primary-col;
+  }
 }
 
 @mixin Btn{
