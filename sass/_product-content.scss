@@ -1,5 +1,5 @@
 .product-contents{
-  height: 500px;
+  height: 1000px;
   background-color: darken($bg-dark-col, 30%);
   .general{
     .included{
@@ -24,4 +24,30 @@
       text-transform: capitalize;
     }
   }
+}
+
+.video-content{
+  display: flex;
+  grid-template-columns: repeat(2,1fr);
+  justify-content: center;
+  column-gap: 50px;
+  align-items: center;
+  list-style: none;
+  color: white;
+   .movie{
+     padding-top: 50px;
+    figcaption,h3{
+      padding: .5em;
+      position: relative;
+      text-align: left;
+      bottom: 520px;
+      font-size: 1.2em;
+      background-color: rgba(0, 0, 0, 0.7);
+      text-transform: capitalize;
+    }
+   }
+}
+.grid-img{
+  width: 320px;
+  height: 500px;
 }
