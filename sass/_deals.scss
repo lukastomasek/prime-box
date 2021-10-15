@@ -1,0 +1,19 @@
+.deals{
+  min-height: 800px;
+  h2{
+    text-align: center;
+    color:white;
+    font-family: $secondary-col;
+    text-transform: capitalize;
+    padding: 1em 0;
+    font-size: 2.5em;
+  }
+  p{
+    color:white;
+    font-family: $secondary-col;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.2em;
+    padding: 0.5em 0;
+  }
+}

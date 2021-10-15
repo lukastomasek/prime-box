@@ -28,8 +28,7 @@
 
 .video-content{
   display: flex;
-  grid-template-columns: repeat(2,1fr);
-  justify-content: center;
+  justify-content: space-evenly;
   column-gap: 50px;
   align-items: center;
   list-style: none;
@@ -45,9 +44,35 @@
       background-color: rgba(0, 0, 0, 0.7);
       text-transform: capitalize;
     }
+    h3{
+      color: $primary-col;
+    }
    }
 }
 .grid-img{
-  width: 320px;
+  width: 300px;
   height: 500px;
+}
+
+@media (max-width: 600px){
+  .video-content{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    .movie{
+      figcaption,h3{
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom:230px;
+      }
+    }
+  }
+  .grid-img{
+    width: 180px;
+    height: 200px;
+  }
+ 
 }
