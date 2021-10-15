@@ -17,3 +17,54 @@
     padding: 0.5em 0;
   }
 }
+
+.plan-container{
+  
+  .plans{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 4em 0;
+    text-align: center;
+    text-transform: capitalize;
+    color:white;
+    font-family: $primary-font;
+    font-size: .75em;
+    h3{
+      color: $primary-col;
+      font-family: $secondary-font;
+      font-size: 1.6em;
+    }
+    button{
+      @include Btn;
+      background-color: $primary-col;
+      width: 120px;
+      border-radius: 5px;
+    }
+
+    .most-popular{
+      background-color: lightslategray;
+      width: 100px;
+      height: 20px;
+      border-radius: 5px;
+      position: absolute;
+      right: minmax(30px,60px);
+      bottom: -1180px;
+      display: none;
+    }
+    
+
+  }
+
+}
+.prices{
+  margin:  0 auto;
+  width: minmax(1400px,auto);
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  text-align: center;
+  text-transform: capitalize;
+  color:white;
+  font-size: 1.3em;
+  font-family: $primary-font;
+  border-top: thin solid white;
+}
