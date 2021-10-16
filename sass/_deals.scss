@@ -1,5 +1,7 @@
 .deals{
+  margin: 0 auto;
   min-height: 800px;
+  width: 800px;
   h2{
     text-align: center;
     color:white;
@@ -42,29 +44,25 @@
     }
 
     .most-popular{
-      background-color: lightslategray;
-      width: 100px;
-      height: 20px;
-      border-radius: 5px;
-      position: absolute;
-      right: minmax(30px,60px);
-      bottom: -1180px;
-      display: none;
+      color: $primary-col;
     }
-    
-
   }
 
 }
-.prices{
-  margin:  0 auto;
-  width: minmax(1400px,auto);
+.price-info, .included-ads, .users, .devices, .download{
   display: grid;
   grid-template-columns: repeat(3,1fr);
+  font-family: $primary-font;
+  font-size: 1em;
   text-align: center;
   text-transform: capitalize;
+  border-top: thin solid $bg-light-col;
+}
+
+i{
   color:white;
-  font-size: 1.3em;
-  font-family: $primary-font;
-  border-top: thin solid white;
+  margin-top: 5px;
+}
+.popular-plan{
+  background-color:  darken($bg-dark-col,10px);
 }

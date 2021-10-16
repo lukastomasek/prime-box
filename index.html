@@ -12,6 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://kit.fontawesome.com/050ec1b76b.js" crossorigin="anonymous"></script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
   <main>
@@ -22,6 +24,9 @@
         <li><button id="log-in">log in</button></li>
       </ul>
     </nav>
+     <div class="modal">
+       
+     </div>
     <section class="product-info">
       <aside class="info">
         <h2>Get endless entertainment, live sports, and the shows and movies you love.</h2>
@@ -80,33 +85,96 @@
         <div class="plans">
          <div class="bundles">
           <h3>bundle & save</h3>
-          <p>monthly fee</p>
+          <p class="fee">monthly fee</p>
           <label class="switch">
-            <input type="checkbox">
+            <input id="check" type="checkbox">
             <span class="slider"></span>
           </label>
-         </div>
+        </div>
           <div class="plan free">
               <h3>free plan</h3>
               <p>prime box</p>
               <button class="free-btn">select</button>
           </div>
-          <div class="plan pro">
-            <p class="most-popular">most popular</p>
+          <div class="plan pro popular-plan">
             <h3>pro plan</h3>
             <p>prime box (no ads)</p>
-            <button class="free-btn">select</button>
-            <div></div>
-
+            <button class="pro-btn">select</button>
+            <p class="most-popular popular-plan">most popular</p>
           </div>
         </div>
+        <div class="price-info">
+          <p>pricing</p>
+          <p>free</p>
+          <p class="popular-plan price-check">$12.99/mo</p>
         </div>
-    
-    </section>
-    <section class="product-plans">
-      
+        <div class="included-ads">
+          <p>ads</p>
+          <i class="fas fa-check fa-2x"></i>
+          <i class="fas fa-times fa-2x popular-plan"></i>
+        </div>
+        <div class="users">
+          <p>Up to 6 user profiles</p>
+          <i class="fas fa-times fa-2x"></i>
+          <i  class="fas fa-check fa-2x popular-plan"></i>
+        </div>
+        <div class="devices">
+          <p>Watch on your TV, laptop, phone, or tablet</p>
+          <i class="fas fa-times fa-2x"></i>
+          <i class="fas fa-check fa-2x popular-plan"></i>
+        </div>
+        <div class="download">
+          <p>Download and watch</p>
+          <i class="fas fa-times fa-2x"></i>
+          <i class="fas fa-check fa-2x popular-plan"></i>
+        </div>
+        </div>  
     </section>
     <footer>
+      <section class="library">
+        <h3>browse</h3>
+        <ul>
+          <li><a href="#"> streaming library</a></li>
+          <li><a href="#"> live tv</a></li>
+          <li><a href="#"> live sports</a></li>
+        </ul>
+      </section>
+      <section class="content">
+        <ul>
+          <li><a href="#"> tv shows</a></li>
+          <li><a href="#"> movies</a></li>
+          <li><a href="#"> originals</a></li>
+          <li><a href="#"> kids</a></li>
+        </ul>
+      </section>
+      <section class="help">
+        <h3>help</h3>
+        <ul>
+          <li><a href="#"> account & billing </a></li>
+          <li><a href="#"> plans & pricing</a></li>
+          <li><a href="#"> supported devices</a></li>
+          <li><a href="#"> Accessibility</a></li>
+        </ul>
+      </section>
+      <section class="about">
+        <h3>about us</h3>
+        <ul>
+          <li><a href="#"> press </a></li>
+          <li><a href="#"> jobs</a></li>
+          <li><a href="#"> contact</a></li>
+        </ul>
+      </section>
+      <section class="other">
+        <h3>follow us</h3>
+        <ul class="socials">
+          <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+          <li> <a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter fa-2x"></i></a></li>
+        </ul>
+      </section>
+      <div class="copyright">
+        <p>&copy; 2021 prime box, LLC</p>
+      </div>
     </footer>
   </main>
 </body>

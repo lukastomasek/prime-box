@@ -34,6 +34,11 @@ main{
   }
 }
 
+.stop-scrolling{
+  height: 100%;
+  overflow: hidden;
+}
+
 @mixin Btn{
   border-style: none;
   width: 50px;

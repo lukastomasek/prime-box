@@ -3,13 +3,15 @@
 @import 'product-content';
 @import 'deals';
 @import 'switch';
+@import 'footer';
+@import 'modal';
 
 nav{
-  position: sticky;
+  position: fixed;
+  z-index: 9999999;
   width: 100vw;
   height: 100px;
   background-color: darken($bg-dark-col,1px);
-  z-index:0;
   h1{
    @include Logo;
   }
