@@ -8,14 +8,11 @@ const promoBtn = document.getElementById('btn-bundles')
 slider.addEventListener('click', ()=>{ 
   slider.checked == true ? feeIndicator.textContent = 'Annualy' : feeIndicator.textContent = 'Monthly'
   slider.checked == true ? popularPlan.textContent = '$129.99/y' : popularPlan.textContent = '$12.99/mo'
-
 })
 
 let openModal = false
 
 function modalBehaviour(event,open){
-  const element = event.target
-  console.log(event.target)
   if(open){
     modalWindow.style.display = 'inline-block'
     document.body.classList.add('stop-scrolling')
@@ -34,6 +31,12 @@ logIn.addEventListener('click', (event)=>{
 promoBtn.addEventListener('click',()=>{
   let bundles  = document.querySelector('.deals')
   bundles.scrollIntoView()
-  // window.scrollTo({top: 1500, 
-  //   behavior:"smooth"})
+
+})
+
+window.addEventListener('mousedown', (e)=>{
+  if(openModal && e.target.className !== "modal"){
+    openModal = false
+    modalBehaviour(e, openModal)
+  }
 })

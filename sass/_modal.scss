@@ -1,11 +1,11 @@
 .modal{
-  position: absolute;
+  position: fixed;
+  left: 35%;
+  top: 15%;
   width: 500px;
   height: 600px;
   background-color: $bg-light-col;
   z-index: 999999;
-  top: 17%;
-  left: 35%;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.4); 
   box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.4);
   display: none;
