@@ -2,11 +2,38 @@
   position: fixed;
   left: 35%;
   top: 15%;
-  width: 500px;
+  width: 400px;
   height: 600px;
   background-color: $bg-light-col;
   z-index: 999999;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.4); 
   box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.4);
   display: none;
+  h2{
+    text-align: left;
+    text-transform: capitalize;
+    font-family: $secondary-font;
+    margin: 1em 1em;
+  }
+  .outline{
+    border: thin solid red;
+  }
+  .email, .password{
+    margin-left: 3em;
+    text-align: left;
+    font-family: $primary-font;
+    text-transform: uppercase;
+     
+    input{
+      width: 250px;
+      height: 35px;
+    }
+    margin-bottom: 3em;
+  }
+.login-btn{
+  @include Btn;
+  background-color: lightgrey;
+  width: 250px;
+  margin-left: 3em;
+}
 }

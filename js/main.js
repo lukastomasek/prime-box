@@ -4,6 +4,7 @@ const popularPlan = document.querySelector('.price-check')
 const logIn = document.getElementById('log-in')
 const modalWindow = document.querySelector('.modal')
 const promoBtn = document.getElementById('btn-bundles')
+// const passwordCheckbox = document.getElementById('show-password')
 
 slider.addEventListener('click', ()=>{ 
   slider.checked == true ? feeIndicator.textContent = 'Annualy' : feeIndicator.textContent = 'Monthly'
@@ -12,20 +13,41 @@ slider.addEventListener('click', ()=>{
 
 let openModal = false
 
-function modalBehaviour(event,open){
+function modalBehaviour(open){
   if(open){
     modalWindow.style.display = 'inline-block'
     document.body.classList.add('stop-scrolling')
+    
+    let logInBtn = document.getElementById('login-btn')
+    logInBtn.addEventListener('click', () =>{
+       console.log('clicked')
+       let emailField = document.getElementById('email')
+       let passwordField = document.getElementById('login-password')
+
+        if(emailField.value === '' || passwordField.value === ''){
+          emailField.classList.add('outline')
+          passwordField.classList.add('outline')
+          return
+        }else{
+        passwordField.classList.remove('outline')
+        emailField.classList.remove('outline')
+        openModal = false
+        modalBehaviour(openModal)
+        alert('Signed In')
+        }
+      
+     })
+
   }else{
     modalWindow.style.display = 'none'
     document.body.classList.remove('stop-scrolling')
+
   }
 }
 
-logIn.addEventListener('click', (event)=>{
+logIn.addEventListener('click', ()=>{
   openModal = !openModal
-  console.log(event)
-  modalBehaviour(event,openModal)
+  modalBehaviour(openModal)
 })
 
 promoBtn.addEventListener('click',()=>{
@@ -34,9 +56,21 @@ promoBtn.addEventListener('click',()=>{
 
 })
 
-window.addEventListener('mousedown', (e)=>{
-  if(openModal && e.target.className !== "modal"){
-    openModal = false
-    modalBehaviour(e, openModal)
+document.addEventListener('click',(e)=>{
+  if(openModal === true  && modalWindow.style.display === 'inline-block'){
+    let targetElement = e.target
+    do {
+      if (targetElement === modalWindow || targetElement === logIn) {
+          // This is a click inside. Do nothing, just return.
+          return;
+      }
+      // Go up the DOM
+      targetElement = targetElement.parentNode;
+      
+    } while (targetElement);
+    // clicked outside of modal
+      openModal = false
+      modalBehaviour(false)
   }
+ 
 })
