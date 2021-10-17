@@ -17,7 +17,7 @@ function modalBehaviour(open){
   if(open){
     modalWindow.style.display = 'inline-block'
     document.body.classList.add('stop-scrolling')
-    
+
     let logInBtn = document.getElementById('login-btn')
     logInBtn.addEventListener('click', () =>{
        console.log('clicked')
@@ -29,11 +29,14 @@ function modalBehaviour(open){
           passwordField.classList.add('outline')
           return
         }else{
-        passwordField.classList.remove('outline')
-        emailField.classList.remove('outline')
-        openModal = false
-        modalBehaviour(openModal)
-        alert('Signed In')
+          passwordField.classList.remove('outline')
+          emailField.classList.remove('outline')
+          openModal = false
+          modalBehaviour(openModal)
+          emailField.value = ''
+          passwordField.value = ''
+          alert('Signed In')
+          return
         }
       
      })
