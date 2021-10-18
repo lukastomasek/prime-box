@@ -45,3 +45,21 @@ footer{
 i:hover{
   color: $primary-col;
 }
+
+@media (max-width: 600px){
+  footer{
+    display: block;
+    margin:  0 auto;
+    text-align: center;
+   .other{
+    .socials{
+      display: flex;
+    }
+  }
+  .copyright{
+    margin-top: 1em;
+    text-align: center;
+
+  }
+  }
+}

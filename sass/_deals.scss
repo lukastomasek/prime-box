@@ -66,3 +66,24 @@ i{
 .popular-plan{
   background-color:  darken($bg-dark-col,10px);
 }
+
+@media (max-width: 600px){
+.deals{
+  width: auto;
+  .plan-container{
+    .plans{
+     display: grid;
+     grid-template-columns: 1fr;
+    } 
+    .price-info, .included-ads, .users, .devices, .download{
+      display: grid;
+      grid-template-columns: 1fr;
+      font-family: $primary-font;
+      font-size: 1em;
+      text-align: center;
+      text-transform: capitalize;
+      border-top: thin solid $bg-light-col;
+    }
+ }
+}
+}

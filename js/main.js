@@ -4,11 +4,10 @@ const popularPlan = document.querySelector('.price-check')
 const logIn = document.getElementById('log-in')
 const modalWindow = document.querySelector('.modal')
 const promoBtn = document.getElementById('btn-bundles')
-// const passwordCheckbox = document.getElementById('show-password')
 
 slider.addEventListener('click', ()=>{ 
-  slider.checked == true ? feeIndicator.textContent = 'Annualy' : feeIndicator.textContent = 'Monthly'
-  slider.checked == true ? popularPlan.textContent = '$129.99/y' : popularPlan.textContent = '$12.99/mo'
+  slider.checked === true ? feeIndicator.textContent = 'Annualy' : feeIndicator.textContent = 'Monthly'
+  slider.checked === true ? popularPlan.textContent = '$129.99/y' : popularPlan.textContent = '$12.99/mo'
 })
 
 let openModal = false
